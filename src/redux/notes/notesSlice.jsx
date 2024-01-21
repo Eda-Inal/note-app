@@ -7,13 +7,16 @@ export const notesSlice = createSlice({
         items: []
     },
     reducers: {
-        addText : (state,action) =>{
+        addText: (state, action) => {
             state.items.push({
-                id : String(nextNoteId+1),
-                text: action.payload
-            })
-        }
+                id: String(nextNoteId + 1),
+                text: action.payload.text,
+                background: action.payload.background,
+            });
+            nextNoteId += 1;
+        },
+       
     },
 });
-export const {addText} = notesSlice.actions;
+export const {addText,addBackground} = notesSlice.actions;
 export default notesSlice.reducer;
