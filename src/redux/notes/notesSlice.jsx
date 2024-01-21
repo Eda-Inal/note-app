@@ -18,5 +18,5 @@ export const notesSlice = createSlice({
        
     },
 });
-export const {addText,addBackground} = notesSlice.actions;
+export const {addText,deleteItemm} = notesSlice.actions;
 export default notesSlice.reducer;
