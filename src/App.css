@@ -1,38 +1,118 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background: linear-gradient(to right, #ff9999, #66ccff, #99ff99, #ffcc66);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.text-container{
+  margin-top: 2rem;
+  width: 500px;
+  height: 220px;
+  background-color: #fddac1;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 1rem;
+
+}
+h1{
+color: #e9faa8;
 }
 
-.App-link {
-  color: #61dafb;
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  width: 500px;
+  margin-top: 1rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Eğer aralarında boşluk bırakmak istiyorsanız space-between kullanabilirsiniz. */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notes-list li {
+  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  padding: 10px;
+  height: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Yatay boşluklar için kullanabilirsiniz. */
+  width: calc(33.333% - 10px); /* İki eleman arasındaki boşluğu düzeltmek için. */
+  box-sizing: border-box; /* Padding ve border'ın genişlik ve yüksekliği içine dahil edilmesini sağlar. */
+}
+textarea{
+  width: 450px;
+  height: 156px;
+  padding: 2px;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  padding: 10px;
+}
+.text-bottom{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.colors{
+  display: flex;
+  cursor: pointer;
+
+}
+.color{
+  padding-right: 2px;
+  border: 2px;
+  border-color: black;
+  background-color: beige;
+  margin-right: 3px;
+}
+.blue{
+
+  background-color: #c0fdff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 3px;
+  
+}
+.pink{
+  background-color: #ffc0cb;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.purple{
+  background-color: #fdffb6;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.green{
+  background-color: #caffbf;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: #ffc0cb;
+  padding: 6px 25px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #a29bfe;
+}
+
+button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #a29bfe;
 }
