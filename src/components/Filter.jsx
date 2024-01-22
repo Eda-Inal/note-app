@@ -12,7 +12,7 @@ dispatch(filteredItems(e.target.value))
    
   }
   return (
-    <div>
+    <div className='filterInput'>
       <input className='search' type="search"placeholder='Search' value={search} onChange={handleChange} />
     </div>
 

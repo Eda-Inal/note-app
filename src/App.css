@@ -121,7 +121,39 @@ button {
   margin-right: 0.3rem;
 
 }
-
+@media only screen and (max-width: 600px) {
+ textarea{
+  width: 300px;
+ }
+ .text-container{
+  width: 400px;
+ }
+ .notes-list{
+  width: 400px;
+  margin-left: 50px;
+  margin-right: 50px;
+ }
+  .notes-list li{
+    width: 100%
+  }
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  .filterInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+   
+    
+  }
+ 
+}
 
 
 .error {
