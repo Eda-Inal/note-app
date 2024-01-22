@@ -137,9 +137,13 @@ text-align: center;
   cursor: pointer;
 }
 .search{
-  border-radius: 10%;
-  width: 200px;
-  height: 30px;
+  
+  width: 250px; 
+  height: 30px; 
+  border-radius: 15px; 
+  border: none;
+  background-color: #ffffff; 
+  cursor: pointer;
   margin-bottom: 1rem;
   outline: none;
   border: none;

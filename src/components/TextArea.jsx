@@ -64,11 +64,6 @@ function TextArea() {
               </div>
             ))}
 
-
-            {/* <div className='blue color' onClick={(e)=> handleLi(e.target.id)}  id='blue'></div>
-  <div className='pink color ' onClick={(e)=> handleLi(e.target.id)} id='pink'></div>
-  <div className='green color' onClick={(e)=> handleLi(e.target.id)}id='green'></div>
-  <div className='yellow color' onClick={(e)=> handleLi(e.target.id)} id='yellow'></div> */}
           </div>
           <div><button onClick={handleClick}>add</button></div>
 
