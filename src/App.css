@@ -23,30 +23,37 @@ font-size: 40px;
 }
 
 
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
 .notes-list {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
-}
-ul {
-  width: 1000px;
-  margin-top: 1rem;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* Eğer aralarında boşluk bırakmak istiyorsanız space-between kullanabilirsiniz. */
 }
 
 .notes-list li {
   position: relative;
   border: 1px solid #ccc;
+  align-items: center;
+  margin-right: 10px;
   margin-top: 0.5rem;
   padding: 10px;
   height: 160px;
-  margin-right: 10px;
+
   margin-bottom: 10px; /* Yatay boşluklar için kullanabilirsiniz. */
   width: calc(33.333% - 10px); /* İki eleman arasındaki boşluğu düzeltmek için. */
+  justify-content: center;
   box-sizing: border-box; /* Padding ve border'ın genişlik ve yüksekliği içine dahil edilmesini sağlar. */
 }
 
@@ -127,14 +134,19 @@ button {
  }
  .text-container{
   width: 400px;
+
+  margin: auto;
+  margin-bottom: 0.5rem;
  }
  .notes-list{
   width: 400px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: auto;
+ 
  }
   .notes-list li{
-    width: 100%
+    width: 400px;
+    margin: auto;
+    margin-bottom: 0.5rem;
   }
   h1{
     display: flex;
@@ -154,6 +166,9 @@ button {
   }
  
 }
+
+  
+  
 
 
 .error {
