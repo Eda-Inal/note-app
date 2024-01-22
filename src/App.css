@@ -2,7 +2,8 @@
   text-align: center;
 }
 body{
-  background: linear-gradient(to right, #ff9999, #66ccff, #66ccff, #ff9999);
+background-color: #a29bfe;
+  /* background: linear-gradient(to right, #ff9999, #66ccff, #66ccff, #ff9999); */
 }
 .text-container{
   margin-top: 2rem;
@@ -13,10 +14,12 @@ body{
   align-items: center;
   margin: auto;
   margin-bottom: 1rem;
+  border: rgb(69, 53, 53) 0.01px solid;
 
 }
 h1{
 color: #ffffff;
+font-size: 40px;
 }
 
 
@@ -27,7 +30,7 @@ color: #ffffff;
   justify-content: center;
 }
 ul {
-  width: 500px;
+  width: 1000px;
   margin-top: 1rem;
   margin: auto;
   display: flex;
@@ -40,7 +43,7 @@ ul {
   border: 1px solid #ccc;
   margin-top: 0.5rem;
   padding: 10px;
-  height: 100px;
+  height: 160px;
   margin-right: 10px;
   margin-bottom: 10px; /* Yatay boşluklar için kullanabilirsiniz. */
   width: calc(33.333% - 10px); /* İki eleman arasındaki boşluğu düzeltmek için. */
@@ -55,6 +58,8 @@ textarea{
   outline: none;
   border: none;
   padding: 10px;
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .text-bottom{
   display: flex;
@@ -66,15 +71,19 @@ textarea{
   cursor: pointer;
 
 }
+.text{
+  font-size: large;
+}
 .color{
   padding-right: 4px;
-  border: 2px;
-  border-color: black;
+  border: 1px solid;
+  border-color: rgb(69, 53, 53) ;
   background-color: beige;
   margin-right: 3px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
+
 }
 
 .blue{
@@ -101,23 +110,22 @@ textarea{
 button {
   border: none;
   outline: none;
-  background-color: #fda1cf;
+  background-color: #a29bfe;
+  cursor: pointer;
+  width: 100px;
   padding: 6px 25px;
   font-size: 17px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   border-radius: 5px;
-  transition: all ease 0.1s;
-  box-shadow: 0px 3px 0px 0px #f0eff6;
+  margin-right: 0.3rem;
+
 }
 
-button:active {
-  transform: translateY(5px);
-  box-shadow: 0px 0px 0px 0px #a29bfe;
-}
+
 
 .error {
-  background-color: #a29bfe;
+  background-color: #ffffff;
   width: 150px;
   height: 80px;
   display: flex;
@@ -138,13 +146,12 @@ text-align: center;
 }
 .search{
   
-  width: 250px; 
-  height: 30px; 
+  width: 300px; 
+  height: 40px; 
   border-radius: 15px; 
-  border: none;
+  border: 1px solid rgb(69, 53, 53) ;
   background-color: #ffffff; 
-  cursor: pointer;
   margin-bottom: 1rem;
   outline: none;
-  border: none;
+  padding-left: 1rem;
 }

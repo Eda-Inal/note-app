@@ -65,7 +65,7 @@ function TextArea() {
             ))}
 
           </div>
-          <div><button onClick={handleClick}>add</button></div>
+          <div><button onClick={handleClick}>Add</button></div>
 
         </div>
 
@@ -74,7 +74,7 @@ function TextArea() {
 
       <ul className='notes-list'>
         {items.map((item) => (
-          <li className={item.background} key={item.id} ><span>  <FontAwesomeIcon onClick={() => deleteI(item.id)} icon={faTrashAlt} className='trash' /></span>{item.text} </li>
+          <li className={item.background} key={item.id} ><span>  <FontAwesomeIcon onClick={() => deleteI(item.id)} icon={faTrashAlt} className='trash' /></span><p className='text'>{item.text}</p> </li>
         ))}
       </ul>
     </div>

@@ -35,14 +35,16 @@ export const notesSlice = createSlice({
             if (!letter) {
                 state.items = state.originalItems;
                 return;
-              }
+            }
+        
             state.items = state.items.filter(item => {
-              if (typeof item.text !== 'string') {
-                return false;
-              }
-              return item.text.toLowerCase().startsWith(letter);
+                if (typeof item.text !== 'string') {
+                    return false;
+                }
+                return item.text.toLowerCase().includes(letter);
             });
-          }
+        }
+        
 
 
     },
