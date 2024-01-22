@@ -63,7 +63,9 @@ function TextArea() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder='Enter your note here...'
-          cols="30" rows="10">
+          cols="30" rows="10"
+          
+          spellCheck="false" >
 
         </textarea>
         <div className='text-bottom'>
