@@ -2,7 +2,7 @@
   text-align: center;
 }
 body{
-  background: linear-gradient(to right, #ff9999, #66ccff, #99ff99, #ffcc66);
+  background: linear-gradient(to right, #ff9999, #66ccff, #66ccff, #ff9999);
 }
 .text-container{
   margin-top: 2rem;
@@ -16,7 +16,7 @@ body{
 
 }
 h1{
-color: #e9faa8;
+color: #ffffff;
 }
 
 
@@ -46,6 +46,7 @@ ul {
   width: calc(33.333% - 10px); /* İki eleman arasındaki boşluğu düzeltmek için. */
   box-sizing: border-box; /* Padding ve border'ın genişlik ve yüksekliği içine dahil edilmesini sağlar. */
 }
+
 textarea{
   width: 450px;
   height: 156px;
