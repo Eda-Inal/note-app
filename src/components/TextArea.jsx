@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addText, deleteItems } from '../redux/notes/notesSlice';
+import { addText, deleteItems,editedItems } from '../redux/notes/notesSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt, faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 
@@ -8,12 +8,14 @@ import { faTrashAlt, faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 
 function TextArea() {
   const items = useSelector((state) => state.notes.items);
+  const edit = useSelector((state) => state.notes.edit); 
   let colors = ["blue", "pink", "green", "yellow", "purple"];
   console.log(items);
   const dispatch = useDispatch();
   const [text, setText] = useState("");
   const [error, setError] = useState("");
   const [selectedBackground, setSelectedBackground] = useState("");
+ 
 
   const handleClick = () => {
 
@@ -38,6 +40,13 @@ function TextArea() {
   }
   const deleteI = (id) => {
     dispatch(deleteItems({ id }));
+
+  }
+  const handleEdit = (id) => {
+    const selectedNote = items.find((item) => item.id === id);
+    dispatch(editedItems({ id, text: selectedNote.text, background: selectedNote.background }));
+    setText(selectedNote.text); // Textarea içeriğini güncelle
+    setSelectedBackground(selectedNote.background);
   }
 
 
@@ -75,7 +84,7 @@ function TextArea() {
 
       <ul className='notes-list'>
         {items.map((item) => (
-          <li className={item.background} key={item.id} ><span>  <FontAwesomeIcon onClick={() => deleteI(item.id)} icon={faTrashAlt} className='trash' /></span><p className='text'>{item.text}</p><span><FontAwesomeIcon icon={faPenToSquare} className='edit'/></span> </li>
+          <li className={item.background} key={item.id} ><span>  <FontAwesomeIcon onClick={() => deleteI(item.id)} icon={faTrashAlt} className='trash' /></span><p className='text'>{item.text}</p><span><FontAwesomeIcon icon={faPenToSquare} onClick={()=>handleEdit(item.id)} className='edit'/></span> </li>
         ))}
       </ul>
     </div>

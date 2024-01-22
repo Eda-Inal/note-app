@@ -1,11 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-let nextNoteId = 0;
+let nextNoteId = 1;
 
 export const notesSlice = createSlice({
     name: 'notes',
     initialState: {
-        items: [],
+        items: [{
+            id:"0",
+            text:"Study redux!",
+            background:"pink"
+        }],
         originalItems: [], 
+        edit :{
+            id: "",
+            text:"",
+            background:""
+        },
      
     },
     reducers: {
@@ -44,11 +53,29 @@ export const notesSlice = createSlice({
                 return item.text.toLowerCase().includes(letter);
             });
         },
+        editedItems: (state, action) => {
+            const { id, text, background } = action.payload;
+          
+            state.items.map((item) => {
+              if (item.id === id) {
+                state.edit.background = item.background;
+                state.edit.id = item.id;
+                state.edit.text = item.text;
+                
+                state.items = state.items.filter(item => item.id !== id);
+            state.originalItems = state.originalItems.filter(item => item.id !== id);
+          
+                // Sadece text değerini güncelle
+                state.edit.text = text;
+              }
+            });
+          }
+          
        
         
 
 
     },
 });
-export const { addText, deleteItems, showItems, filteredItems } = notesSlice.actions;
+export const { addText, deleteItems, showItems, filteredItems,editedItems } = notesSlice.actions;
 export default notesSlice.reducer;
