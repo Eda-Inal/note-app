@@ -4,7 +4,8 @@ let nextNoteId = 0;
 export const notesSlice = createSlice({
     name: 'notes',
     initialState: {
-        items: []
+        items: [],
+        filteredItems: [],
     },
     reducers: {
         addText: (state, action) => {
@@ -15,8 +16,14 @@ export const notesSlice = createSlice({
             });
             nextNoteId += 1;
         },
-       
+        deleteItems: (state, action) => {
+            const { id } = action.payload;
+
+            state.items = state.items.filter(item => item.id !== id);
+        }
+
+
     },
 });
-export const {addText,deleteItemm} = notesSlice.actions;
+export const { addText, deleteItems, showItems, filteredItems } = notesSlice.actions;
 export default notesSlice.reducer;
