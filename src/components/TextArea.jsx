@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addText, deleteItems } from '../redux/notes/notesSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { faTrashAlt, faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+
 
 
 function TextArea() {
@@ -74,7 +75,7 @@ function TextArea() {
 
       <ul className='notes-list'>
         {items.map((item) => (
-          <li className={item.background} key={item.id} ><span>  <FontAwesomeIcon onClick={() => deleteI(item.id)} icon={faTrashAlt} className='trash' /></span><p className='text'>{item.text}</p> </li>
+          <li className={item.background} key={item.id} ><span>  <FontAwesomeIcon onClick={() => deleteI(item.id)} icon={faTrashAlt} className='trash' /></span><p className='text'>{item.text}</p><span><FontAwesomeIcon icon={faPenToSquare} className='edit'/></span> </li>
         ))}
       </ul>
     </div>

@@ -43,7 +43,8 @@ export const notesSlice = createSlice({
                 }
                 return item.text.toLowerCase().includes(letter);
             });
-        }
+        },
+       
         
 
 
