@@ -7,7 +7,7 @@
 ### Notları kayıt etmeden önce seçilen renk ne ise o renkte listelenmektedir.
 ### Ekrandaki bir diğer input ile daha önce yazılmış herhangi not filtrelenebilmektedir.
 ### Tasarım responsive haldedir.
-###Notlar  istenildiğinde tekrar düzeltilebilmektedir.
+### Notlar  istenildiğinde tekrar düzeltilebilmektedir.
 
 
 
