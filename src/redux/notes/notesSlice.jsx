@@ -9,7 +9,11 @@ export const notesSlice = createSlice({
             text:"Study redux!",
             background:"pink"
         }],
-        originalItems: [], 
+        originalItems: [{
+            id:"0",
+            text:"Study redux!",
+            background:"pink"
+        }], 
         edit :{
             id: "",
             text:"",
