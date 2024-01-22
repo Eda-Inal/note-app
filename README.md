@@ -1,5 +1,5 @@
 
-https://github.com/Eda-Inal/note-app/assets/119332810/682df2ac-6d4d-4663-b1b5-b6c60dcb9734
+
 ## Patika dev redux ilk ödevidir.
 
 ### Textarea'a ya yazılacak olan notlar kayıt edilip listelenmektedir
